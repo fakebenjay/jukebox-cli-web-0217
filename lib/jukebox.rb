@@ -63,11 +63,12 @@ def run(songs)
     elsif input == "play"
       1.times do play(songs)
       end
+    elsif input == "exit"
+      1.times do exit_jukebox
+      exit
+      end
     end
   end
 
-  if input == "exit"
-    exit_jukebox
-  end
 
 end
