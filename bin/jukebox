@@ -4,14 +4,16 @@ require_relative "../lib/jukebox"
 
 songs = [
   "Phoenix - 1901",
-  "Tokyo Police Club - Wait Up",
-  "Sufjan Stevens - Too Much",
-  "The Naked and the Famous - Young Blood",
-  "(Far From) Home - Tiga",
-  "The Cults - Abducted",
-  "Phoenix - Consolation Prizes",
-  "Harry Chapin - Cats in the Cradle",
-  "Amos Lee - Keep It Loose, Keep It Tight"
+  "Richard & Linda Thompson - Shoot Out The Lights",
+  "Wolf Parade - We Built Another World",
+  "Rush - Middletown Dreams",
+  "Be Bop Deluxe - Blazing Apostles",
+  "Johnny Hallyday - Noir c'est noir",
+  "Serú Girán - Encuentro En El Diablo",
+  "Jethro Tull - Songs From The Wood",
+  "They Might Be Giants - Why Does The Sun Shine? (The Sun Is A Mass of Incandescent Gas)",
+  "Soda Stereo - De Música Ligera",
+  "Wilco - Impossible Germany"
 ]
 
 

@@ -3,21 +3,23 @@ require 'pry'
 
 songs = [
   "Phoenix - 1901",
-  "Tokyo Police Club - Wait Up",
-  "Sufjan Stevens - Too Much",
-  "The Naked and the Famous - Young Blood",
-  "(Far From) Home - Tiga",
-  "The Cults - Abducted",
-  "Phoenix - Consolation Prizes",
-  "Harry Chapman - Cats in the Cradle",
-  "Amos Lee - Keep It Loose, Keep It Tight"
+  "Richard & Linda Thompson - Shoot Out The Lights",
+  "Wolf Parade - We Built Another World",
+  "Rush - Middletown Dreams",
+  "Be Bop Deluxe - Blazing Apostles",
+  "Johnny Hallyday - Noir c'est noir",
+  "Serú Girán - Encuentro En El Diablo",
+  "Jethro Tull - Songs From The Wood",
+  "They Might Be Giants - Why Does The Sun Shine? (The Sun Is A Mass of Incandescent Gas)",
+  "Soda Stereo - De Música Ligera",
+  "Wilco - Impossible Germany"
 ]
 
 describe "CLI Jukebox" do
 
-  context "methods" do 
-    describe "#help" do 
-      it "lists out the possible commands" do 
+  context "methods" do
+    describe "#help" do
+      it "lists out the possible commands" do
         expect { help }.to output(/^(?=.*help)(?=.*list)(?=.*play)(?=.*exit).+/m).to_stdout
       end
     end
@@ -35,24 +37,24 @@ describe "CLI Jukebox" do
 
       it 'returns an error when given a number that does not correspond to a song' do
         allow(self).to receive(:gets).and_return("12323")
-        expect { play(songs) }.to output(/Invalid input, please try again/).to_stdout
+        expect { play(songs) }.to output(/That song sucks, please try again/).to_stdout
       end
 
       it 'returns an error when given a name that does not correspond to an existing song' do
         allow(self).to receive(:gets).and_return("Blah blah foo blah")
-        expect { play(songs) }.to output(/Invalid input, please try again/).to_stdout
+        expect { play(songs) }.to output(/That song sucks, please try again/).to_stdout
       end
     end
 
     describe "#list" do
-      it "lists out the available songs" do  
+      it "lists out the available songs" do
         expect { list(songs) }.to output(/Phoenix - 1901/).to_stdout
       end
     end
 
-    describe "#exit_jukebox" do 
+    describe "#exit_jukebox" do
       it "terminates the running of the program and outputs 'Goodbye'" do
-        expect { exit_jukebox }.to output(/Goodbye/).to_stdout 
+        expect { exit_jukebox }.to output(/Goodbye/).to_stdout
       end
     end
 
@@ -79,4 +81,3 @@ describe "CLI Jukebox" do
     end
   end
 end
-
